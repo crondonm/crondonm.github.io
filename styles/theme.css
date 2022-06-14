@@ -1,0 +1,55 @@
+
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+h2 {
+  overflow: hidden;
+  font-size: 30px;
+  margin: 5px 0;
+  padding-top: 10px;
+}
+
+h4 {
+	font-weight: bold;
+}
+
+.ptitle {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.authors {
+	font-size: 15px;
+}
+
+.abstract {
+	padding-top: 10px;
+}
+
+.jumbotron {
+  padding: 10px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 870px;
+   }
+}
