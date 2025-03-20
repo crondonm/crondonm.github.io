@@ -76,7 +76,8 @@
 		    <a href="https://www.bcentral.cl/web/banco-central"> Central Bank of Chile</a> 
 		
         	<ul class="list-unstyled">
-		    <h5>Ph.D. Economics, <a href="https://economics.nd.edu">University of Notre Dame </a> </h5>
+		    <br>
+			<h5>Ph.D. Economics, <a href="https://economics.nd.edu">University of Notre Dame </a> </h5>
 			<h5>M.A.  Economics, <a href="https://economia.uniandes.edu.co">Universidad de Los Andes, Bogotá, Colombia</a></h5>
 			<h5>B.A.  Economics, <a href="https://economia.uniandes.edu.co">Universidad de Los Andes, Bogotá, Colombia</a></h5>
 			</ul>	
@@ -129,21 +130,36 @@
 	</div> 
     
 	<style>
-		.btn-purple {
-			background-color: #9B59B6;
-			border-color: #8E44AD; /* optional darker border */
-			color: #fff;           /* white text for contrast */
-		}
+	.btn-purple {
+		color: #ffffff !important;
+		background-image: -webkit-linear-gradient(top, #AF7AC5 0%, #9B59B6 100%);
+		background-image:      -o-linear-gradient(top, #AF7AC5 0%, #9B59B6 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#AF7AC5), to(#9B59B6));
+		background-image:         linear-gradient(to bottom, #AF7AC5 0%, #9B59B6 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffAF7AC5', endColorstr='#ff9B59B6', GradientType=0);
+		filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+		background-repeat: repeat-x;
+		border-color: #884EA0 !important;
+	}
+
+	.btn-purple:hover, .btn-purple:focus {
+		color: #ffffff !important;
+		background-image: -webkit-linear-gradient(top, #9B59B6 0%, #884EA0 100%);
+		background-image:      -o-linear-gradient(top, #9B59B6 0%, #884EA0 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#9B59B6), to(#884EA0));
+		background-image:         linear-gradient(to bottom, #9B59B6 0%, #884EA0 100%);
+		border-color: #76448A !important;
+	}
 	</style>
 
 	<div class="row" style="padding-top:10px;padding-bottom:10px;"></div>
 	<div class="row" style="padding-bottom:10px;text-align:center;">
-       	<a class="btn btn-lg btn-danger" href="teaching.html">Teaching</a>
-		<a class="btn btn-lg btn-primary" href="research.html">Research</a>
-       	<a class="btn btn-lg btn-info" onclick="_gaq.push(['_trackPageview', 'content/Rondon_CV.pdf']);"href="content/Rondon_CV.pdf">CV</a>
-       	<a class="btn btn-lg btn-warning" href="https://scholar.google.com/citations?user=DfqEm4QAAAAJ&hl=en&oi=ao">Google Scholar</a>
 		<a class="btn btn-lg btn-success" href="https://github.com/crondonm">GitHub</a>
-		<a class="btn btn-lg btn-purple" href="teaching.html">Service</a>
+		<a class="btn btn-lg btn-primary" href="research.html">Research</a>
+		<a class="btn btn-lg btn-warning" href="https://scholar.google.com/citations?user=DfqEm4QAAAAJ&hl=en&oi=ao">Google Scholar</a>
+		<a class="btn btn-lg btn-info" onclick="_gaq.push(['_trackPageview', 'content/Rondon_CV.pdf']);"href="content/Rondon_CV.pdf">CV</a>
+		<a class="btn btn-lg btn-danger" href="teaching.html">Teaching</a>
+		<a class="btn btn-lg btn-purple" href="service.html">Service</a>
 	</div>
 </div>
 	 <div class="row" style="text-align:right;">
