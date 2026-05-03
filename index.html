@@ -1,183 +1,34 @@
-﻿
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Homepage of Carlos Rond&oacute;n-Moreno">
-    <meta name="author" content="Carlos Rond&oacute;n-Moreno">
-    <meta name="keywords" content="Carlos Rond&oacute;n-Moreno, Carlos Rondon Moreno, Carlos Rondon, Tracking R, Rt Live, Carlos R Moreno, Economics, University of Notre Dame, International Economics, Macroeconomics, Macrofinancial Models">
+<head>
+<meta charset="utf-8" />
+<title>Carlos Rondón-Moreno — Senior Economist · Central Bank of Chile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Carlos Rondón-Moreno — Senior Economist at the Central Bank of Chile. Research on macroprudential policy, financial crises, and computational macroeconomics." />
+<meta name="author" content="Carlos Rondón-Moreno" />
+<meta property="og:title" content="Carlos Rondón-Moreno" />
+<meta property="og:description" content="Senior Economist at the Central Bank of Chile. Macroprudential policy, financial crises, computational macro." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://carlosrondonmoreno.com/" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="root"></div>
 
-    <title>Carlos Rond&oacute;n-Moreno</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
 
-    <!-- Bootstrap core CSS -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap theme -->
-    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="styles/theme.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-74MX57PF48"></script>
-	<script>
-  		window.dataLayer = window.dataLayer || [];
-  		function gtag(){dataLayer.push(arguments);}
-  		gtag('js', new Date());
-
-  		gtag('config', 'G-74MX57PF48');
-	</script>
-   </head>
-
-  <body role="document">
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">Carlos Rond&oacute;n-Moreno</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-			<li><a href="content/Rondon_CV.pdf">CV</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="teaching.html">Teaching</a></li> 
-            <li><a href="service.html">Service</a></li>
-			<li><a href="https://github.com/crondonm">GitHub</a></li> 
-           </ul>
-			
-          <ul class="nav navbar-right"> 
-         </div><!--/.nav-collapse -->
-	   </div>
-    </div>
-
-    <div class="container theme-showcase" role="main">
-	      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="row"> 
-        <div class="col-md-3" style="padding-top:0px">
-			<img src="content/2019.jpg" class="img-responsive" width="304" height="236">
-			
-		</div>
-	    <div class="col-md-9" style="padding-top:0px">			
-            <h3>Carlos Rond&oacute;n-Moreno</h3>
-			<h5>Senior Economist</h5>
-			<a href="https://www.bcentral.cl/areas/investigacion">Research Department</a> 
-			at the 
-		    <a href="https://www.bcentral.cl/web/banco-central"> Central Bank of Chile</a> 
-		
-        	<ul class="list-unstyled">
-		    <br>
-			<h5>Ph.D. Economics, <a href="https://economics.nd.edu">University of Notre Dame </a> </h5>
-			<h5>M.A.  Economics, <a href="https://economia.uniandes.edu.co">Universidad de Los Andes, Bogotá, Colombia</a></h5>
-			<h5>B.A.  Economics, <a href="https://economia.uniandes.edu.co">Universidad de Los Andes, Bogotá, Colombia</a></h5>
-			</ul>	
-		</div>
-		<div class="col-md-9" style="padding-top:10px">			
-        <p> I am a senior economist in the Research Department at the Central Bank of Chile. My work focuses on macroeconomics, specifically examining the causes and effects of financial crises. I research how macroprudential policies, such as capital controls, can help prevent and mitigate economic downturns. 
-		<p> I am also interested in computational economics, AI and programming. 
-		<p> <strong>Previous Affiliations:</strong> Inter-American Development Bank, the World Bank, and the International Monetary Fund.
-		</div>
-				
-		<div class="col-md-9" style="padding-top:10px">			
-        </div>
-			</div>	
-	      <div class="row"> 
-	
-				<div class="col-md-3">
-					<ul class="list-unstyled">
-					<li><strong>Contact</strong> </li>  
-					<li>E: crondon[at]bcentral[dot]cl</li>
-					<li>Agustinas 1180, Santiago, Chile</li>
-						</ul>
-				</div>
-		
-		<div class="col-md-4">
-			<ul class="list-unstyled">
-			<li><strong>Teaching and Research Fields</strong> </li>
-            <li>Macroeconomics</li>
-			<li>International Economics</li>
-            <li>Computational Economics</li>
-			<li>Monetary Economics</li>
-		</ul> 
-        </div>
-
-		<div class="col-md-5" style="padding-top:0px">
-		<ul class="list-unstyled">
-			<li><strong>References</strong> </li>
-            <li><a href="https://sites.google.com/site/andresfernandezmartin8/">Andrés Fernández</a> - International Monetary Fund</li>		
-			<li><a href="https://sites.google.com/site/cjsbaumeister/">Christiane Baumeister</a> - University of Notre Dame</li>		
-			<li><a href="https://sosapadilla.github.io">Cesar Sosa-Padilla</a> - University of Notre Dame</li>		
-			<li><a href="https://www3.nd.edu/~esims1/">Eric Sims</a> - University of Notre Dame</li>
-			<li><a href="https://www.zachstangebye.com">Zachary Stangebye</a> - University of Notre Dame</li>
-			
-		</ul>
-		</div>
-</div> 
-		</div>
-	
-	  </div>
-		
-	</div> 
-    
-	<style>
-	.btn-purple {
-		color: #ffffff !important;
-		background-image: -webkit-linear-gradient(top, #AF7AC5 0%, #9B59B6 100%);
-		background-image:      -o-linear-gradient(top, #AF7AC5 0%, #9B59B6 100%);
-		background-image: -webkit-gradient(linear, left top, left bottom, from(#AF7AC5), to(#9B59B6));
-		background-image:         linear-gradient(to bottom, #AF7AC5 0%, #9B59B6 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffAF7AC5', endColorstr='#ff9B59B6', GradientType=0);
-		filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-		background-repeat: repeat-x;
-		border-color: #884EA0 !important;
-	}
-
-	.btn-purple:hover, .btn-purple:focus {
-		color: #ffffff !important;
-		background-image: -webkit-linear-gradient(top, #9B59B6 0%, #884EA0 100%);
-		background-image:      -o-linear-gradient(top, #9B59B6 0%, #884EA0 100%);
-		background-image: -webkit-gradient(linear, left top, left bottom, from(#9B59B6), to(#884EA0));
-		background-image:         linear-gradient(to bottom, #9B59B6 0%, #884EA0 100%);
-		border-color: #76448A !important;
-	}
-	</style>
-
-	<div class="row" style="padding-top:10px;padding-bottom:10px;"></div>
-	<div class="row" style="padding-bottom:10px;text-align:center;">
-		<a class="btn btn-lg btn-success" href="https://github.com/crondonm">GitHub</a>
-		<a class="btn btn-lg btn-primary" href="research.html">Research</a>
-		<a class="btn btn-lg btn-warning" href="https://scholar.google.com/citations?user=DfqEm4QAAAAJ&hl=en&oi=ao">Google Scholar</a>
-		<a class="btn btn-lg btn-info" onclick="_gaq.push(['_trackPageview', 'content/Rondon_CV.pdf']);"href="content/Rondon_CV.pdf">CV</a>
-		<a class="btn btn-lg btn-danger" href="teaching.html">Teaching</a>
-		<a class="btn btn-lg btn-purple" href="service.html">Service</a>
-	</div>
-</div>
-	 <div class="row" style="text-align:right;">
-		<div class="col-md-6">
-	 	</div>
-	
-	</div>
-    </div> <!-- /container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    </body>
-    </html>
-
-	<div class="row">
-	<div class='col-md-12'>
-			
+<script src="data.js"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="variation-a.jsx"></script>
+<script type="text/babel" src="subpages.jsx"></script>
+<script type="text/babel" src="command-palette.jsx"></script>
+<script type="text/babel" src="app.jsx"></script>
+</body>
+</html>
