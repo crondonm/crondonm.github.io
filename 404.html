@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>404 — Carlos Rondón-Moreno</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<style>
+  :root {
+    --bg: #0a0a0c;
+    --fg: #e8e6df;
+    --fg-dim: #8a8a85;
+    --fg-mute: #555550;
+    --line: #1f1f24;
+    --accent: #029386;
+    --mono: "JetBrains Mono", ui-monospace, "Menlo", monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--mono);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 24px;
+  }
+  .frame {
+    width: 100%;
+    max-width: 640px;
+    border: 1px solid var(--line);
+    background: #111114;
+    padding: 28px 32px;
+    border-radius: 6px;
+  }
+  .topbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px dashed var(--line);
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: var(--fg-dim);
+  }
+  .traffic { display: inline-flex; gap: 6px; }
+  .traffic span {
+    width: 11px; height: 11px; border-radius: 50%;
+    background: #2a2a30;
+  }
+  .traffic span:nth-child(1) { background: #e54848; }
+  .traffic span:nth-child(2) { background: #f9b83a; }
+  .traffic span:nth-child(3) { background: #41c14b; }
+  .prompt { color: var(--fg-dim); font-size: 13px; margin-bottom: 6px; }
+  .prompt b { color: var(--accent); font-weight: 600; }
+  h1 {
+    font: 600 28px/1.2 var(--mono);
+    margin: 0 0 12px;
+    color: var(--fg);
+  }
+  h1 em { color: var(--accent); font-style: normal; }
+  p { font-size: 14px; line-height: 1.6; color: var(--fg-dim); margin: 0 0 12px; }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--accent);
+  }
+  a:hover { color: #fff; border-bottom-color: #fff; }
+  .blink { animation: blink 1s steps(1) infinite; color: var(--accent); }
+  @keyframes blink { 50% { opacity: 0; } }
+  .links { margin-top: 18px; display: flex; gap: 16px; flex-wrap: wrap; font-size: 13px; }
+</style>
+</head>
+<body>
+<main class="frame">
+  <div class="topbar">
+    <span class="traffic"><span></span><span></span><span></span></span>
+    <span>~/site — carlos@bcch — zsh</span>
+  </div>
+  <div class="prompt"><b>carlos@bcch</b> ~ $ cat <span id="path"></span></div>
+  <h1>404 <em>// not found</em><span class="blink">_</span></h1>
+  <p>The path you tried to read doesn't exist on this filesystem. It may have moved, or it may never have been here.</p>
+  <div class="links">
+    <a href="/">← home</a>
+    <a href="/#research">research</a>
+    <a href="/#teaching">teaching</a>
+    <a href="/#service">service</a>
+  </div>
+</main>
+<script>
+  document.getElementById("path").textContent = location.pathname + location.search;
+</script>
+</body>
+</html>
