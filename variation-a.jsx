@@ -29,6 +29,7 @@ function VariationA({ onCmd, onPage }) {
       </div>
 
       <div className="content">
+        <div className="hero">
         <div className="left">
           <pre className="ascii">{ascii}</pre>
           <div className="prompt"><b>carlos@bcch</b> ~ $ whoami</div>
@@ -48,19 +49,22 @@ function VariationA({ onCmd, onPage }) {
             <a style={{ "--xc": "var(--nav-0)" }} onClick={() => onPage("research")}>research</a>
             <a style={{ "--xc": "var(--nav-1)" }} onClick={() => onPage("teaching")}>teaching</a>
             <a style={{ "--xc": "var(--nav-2)" }} onClick={() => onPage("service")}>service</a>
+            <a style={{ "--xc": "var(--nav-6)" }} onClick={() => onPage("code")}>code</a>
             <a style={{ "--xc": "var(--nav-3)" }} onClick={() => onCmd("ext:cv")}>cv</a>
-            <a style={{ "--xc": "var(--nav-4)" }} onClick={() => onCmd("ext:gh")}>github</a>
-            <a style={{ "--xc": "var(--nav-5)" }} onClick={() => onCmd("ext:gs")}>scholar</a>
+            <a style={{ "--xc": "var(--nav-5)" }} onClick={() => onCmd("ext:gh")}>github</a>
+            <a style={{ "--xc": "var(--nav-4)" }} onClick={() => onCmd("ext:gs")}>scholar</a>
           </div>
         </div>
 
-        <div className="side">
           <div className="photo" style={{ letterSpacing: "0px", width: "520px", margin: "0px" }}>
             <img src="assets/carlos.jpg" alt="Carlos" style={{ objectFit: "cover", width: "5px" }} />
             <div className="meta">
               <span>id_rsa.pub</span>
             </div>
           </div>
+        </div>
+
+        <div className="cards">
           <div className="card">
             <h4><span className="num">02</span> recent.papers</h4>
             {window.SITE_DATA.PAPERS.slice(0, 3).map((p, i) =>
@@ -72,7 +76,18 @@ function VariationA({ onCmd, onPage }) {
             )}
           </div>
           <div className="card">
-            <h4><span className="num">03</span> sce / news</h4>
+            <h4><span className="num">03</span> recent.code</h4>
+            {window.SITE_DATA.REPOS.slice(0, 3).map((r, i) =>
+            <a className="paper" key={i} onClick={() => onPage("code")}>
+                {r.new && <span className="badge-new">NEW</span>}
+                <span className="tag">{r.tag}</span>
+                <span className="title-link">{r.short}</span>
+                <div className="meta">{r.yr} · {r.lang}</div>
+              </a>
+            )}
+          </div>
+          <div className="card">
+            <h4><span className="num">04</span> sce / news</h4>
             <div style={{ font: "13px/1.55 var(--mono)", color: "var(--fg-dim)" }}>
               <div>
                 <span className="badge-new">NEW</span>

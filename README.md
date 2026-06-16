@@ -10,7 +10,7 @@ No build step. The site is plain static files:
 - `data.js` — all content (papers, courses, service, command palette items, palette swatches, font pairings) lives here as plain JS objects. **This is the file you'll edit most often.**
 - `app.jsx` — top-level React app: state, routing (hash-based), keyboard shortcuts, tweaks panel wiring.
 - `variation-a.jsx` — homepage layout (the terminal/shell aesthetic).
-- `subpages.jsx` — Research, Teaching, Service pages.
+- `subpages.jsx` — Research, Teaching, Service, Code pages.
 - `command-palette.jsx` — `/`-triggered command palette.
 - `tweaks-panel.jsx` — live theming controls (color, font, density, pattern, nav palette).
 - `styles.css` — all styling.
@@ -60,6 +60,26 @@ The homepage shows the first 3 entries (`PAPERS.slice(0, 3)`), so order matters 
 
 **When adding a paper, also update the static fallback in [`index.html`](index.html)** — the `<ul>` inside `<div id="root">` lists the top 3 papers for SEO/link-preview bots that don't run JavaScript. Keep the two roughly in sync.
 
+### Add a repository (Code section)
+
+Edit the `REPOS` array in [`data.js`](data.js). Each entry has the shape:
+
+```js
+{
+  name: "repo-name",                 // repository name, shown as the linked title
+  new: true,                         // optional — shows a gold "NEW" badge on the card + Code page
+  yr: "2026",                        // year
+  tag: "UTILITY",                    // short category label (UTILITY, REPLICATION, LIBRARY, …)
+  lang: "Bash · macOS",              // language / platform, shown as a pill and on the homepage card
+  blurb: "One-paragraph description.", // pulled from the repo's README
+  github: "https://github.com/...",  // repo URL
+  pdf: "https://...",                // optional — docs/paper link, rendered as "docs ↗"
+  short: "repo.short.slug"           // shown on the homepage card
+}
+```
+
+The homepage `recent.code` card shows the first 3 entries (`REPOS.slice(0, 3)`), so order matters — put newest first. The Code subpage lists them all under `// repositories`. Add `extras: [{ label, url }]` for any additional links.
+
 ### Add a course
 
 Edit the `COURSES` array in [`data.js`](data.js):
@@ -97,7 +117,7 @@ Replace `content/Rondon_CV.pdf` with the new file (keep the same filename so exi
 
 ### Update bio / homepage copy
 
-Headline name, bio paragraphs, and the news card on the right side of the homepage are in [`variation-a.jsx`](variation-a.jsx). The static SEO fallback bio is in [`index.html`](index.html) — keep them roughly aligned.
+The homepage (`variation-a.jsx`) is a `.hero` (bio + photo) above a full-width `.cards` grid holding the `recent.papers`, `recent.code`, and `sce / news` cards. Headline name, bio paragraphs, and the `sce / news` card text all live in [`variation-a.jsx`](variation-a.jsx). The static SEO fallback bio is in [`index.html`](index.html) — keep them roughly aligned.
 
 ### Add a command-palette shortcut
 

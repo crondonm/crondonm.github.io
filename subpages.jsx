@@ -96,7 +96,7 @@ function ResearchPage({ onBack }) {
       </section>
       <section>
         <h4>// working papers</h4>
-        {D.PAPERS.filter(p => p.tag === "WP №941").map((p,i)=>(
+        {D.PAPERS.filter(p => (p.tag || "").startsWith("WP")).map((p,i)=>(
           <div className="pp" key={i}>
             <div>
               <span className="yr">{p.yr}</span>
@@ -205,6 +205,45 @@ function ServicePage({ onBack }) {
   );
 }
 
+function CodePage({ onBack }) {
+  const D = window.SITE_DATA;
+  return (
+    <div className="subp" style={{"--accent": "var(--nav-6)"}}>
+      <PageHeader
+        onBack={onBack}
+        crumb="code"
+        title="Code"
+        lede="Open-source tools and replication packages — small utilities, research code, and things I needed and couldn't find elsewhere."
+      />
+      <section>
+        <h4>// repositories</h4>
+        {D.REPOS.map((r,i)=>(
+          <div className="pp repo" key={i}>
+            <div>
+              <span className="yr">{r.yr}</span>
+              {r.new && <span className="badge-new">NEW</span>}
+              <a className="ttl" href={r.github} target="_blank" rel="noopener"><b>{r.name}</b></a>
+            </div>
+            <div className="repo-tags">
+              {r.lang && <span className="lang">{r.lang}</span>}
+              {r.tag  && <span className="lang">{r.tag}</span>}
+            </div>
+            <div className="repo-blurb">{r.blurb}</div>
+            <div className="links" style={{marginTop:8}}>
+              {r.github && <a href={r.github} target="_blank" rel="noopener">github ↗</a>}
+              {r.pdf    && <a href={r.pdf}    target="_blank" rel="noopener">docs ↗</a>}
+              {(r.extras || []).map((x,j) => (
+                <a key={j} href={x.url} target="_blank" rel="noopener">{x.label} ↗</a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </section>
+    </div>
+  );
+}
+
 window.ResearchPage = ResearchPage;
 window.TeachingPage = TeachingPage;
 window.ServicePage = ServicePage;
+window.CodePage = CodePage;

@@ -12,27 +12,27 @@ const NAV_PALETTES = {
   "muted-earth": {
     label: "Muted earth",
     desc: "Warm, low-saturation — like a worn academic press cover",
-    colors: ["#7c6f57", "#a07b5b", "#9a8f6e", "#7a8471", "#5e6b6f", "#8a6f70"]
+    colors: ["#7c6f57", "#a07b5b", "#9a8f6e", "#7a8471", "#5e6b6f", "#8a6f70", "#6d7e8a", "#a8915c"]
   },
   "xkcd-vivid": {
     label: "XKCD vivid",
-    desc: "Six saturated XKCD primaries — outline only",
-    colors: ["#01b44c", "#75bbfd", "#f97306", "#e50000", "#9a0eea", "#13eac9"]
+    desc: "Eight saturated XKCD primaries — outline only",
+    colors: ["#01b44c", "#75bbfd", "#f97306", "#e50000", "#9a0eea", "#13eac9", "#c20078", "#fac205"]
   },
   "xkcd-cool": {
     label: "XKCD cool",
     desc: "Cool half of the XKCD wheel — teals, blues, violets",
-    colors: ["#13eac9", "#029386", "#2a6cf6", "#75bbfd", "#7e1e9c", "#9a0eea"]
+    colors: ["#13eac9", "#029386", "#2a6cf6", "#75bbfd", "#7e1e9c", "#9a0eea", "#0485d1", "#6241c7"]
   },
   "xkcd-warm": {
     label: "XKCD warm",
     desc: "Warm half — reds, oranges, golds, magentas",
-    colors: ["#e50000", "#f97306", "#fac205", "#fdaa48", "#c20078", "#cb416b"]
+    colors: ["#e50000", "#f97306", "#fac205", "#fdaa48", "#c20078", "#cb416b", "#9a0200", "#fd5956"]
   },
   "ink-jewel": {
     label: "Ink & jewel",
     desc: "Deep saturated tones — confident but not loud",
-    colors: ["#2a6f97", "#4a7c59", "#9c6644", "#7d4f50", "#5e548e", "#a68a64"]
+    colors: ["#2a6f97", "#4a7c59", "#9c6644", "#7d4f50", "#5e548e", "#a68a64", "#2f6f6a", "#7a3b52"]
   }
 };
 window.NAV_PALETTES = NAV_PALETTES;
@@ -42,7 +42,7 @@ function App() {
   const [cmdOpen, setCmdOpen] = React.useState(false);
   const [page, setPage] = React.useState(() => {
     const h = (window.location.hash || "").replace(/^#/, "");
-    return ["research","teaching","service"].includes(h) ? h : "home";
+    return ["research","teaching","service","code"].includes(h) ? h : "home";
   });
   const D = window.SITE_DATA;
 
@@ -56,7 +56,7 @@ function App() {
   React.useEffect(() => {
     const onHash = () => {
       const h = (window.location.hash || "").replace(/^#/, "");
-      const next = ["research","teaching","service"].includes(h) ? h : "home";
+      const next = ["research","teaching","service","code"].includes(h) ? h : "home";
       setPage(next);
       window.scrollTo({ top: 0, behavior: "instant" });
     };
@@ -145,6 +145,7 @@ function App() {
   else if (page === "research") body = <ResearchPage onBack={onBackHome} />;
   else if (page === "teaching") body = <TeachingPage onBack={onBackHome} />;
   else if (page === "service") body = <ServicePage onBack={onBackHome} />;
+  else if (page === "code") body = <CodePage onBack={onBackHome} />;
 
   return (
     <div className="stage">

@@ -101,7 +101,10 @@ body { background: var(--bg); color: var(--fg); font-family: var(--sans); min-he
 .va .topbar .meta { margin-left: auto; display: flex; gap: 18px; }
 .va .topbar .meta span b { color: var(--fg); font-weight: 500; }
 
-.va .content { flex: 1; padding: 60px 80px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 72px; min-height: 0; max-width: 1400px; margin: 0 auto; width: 100%; }
+.va .content { flex: 1; padding: 60px 80px; display: flex; flex-direction: column; gap: 44px; min-height: 0; max-width: 1400px; margin: 0 auto; width: 100%; }
+.va .hero { display: grid; grid-template-columns: 1.4fr 1fr; gap: 72px; align-items: start; }
+.va .hero .photo { align-self: start; justify-self: center; }
+.va .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; align-items: start; }
 .va .ascii {
   font: 11px/1.05 var(--mono);
   color: var(--accent);
@@ -955,6 +958,33 @@ body { background: var(--bg); color: var(--fg); font-family: var(--sans); min-he
   border-bottom: 1px dashed color-mix(in srgb, var(--accent) 50%, transparent);
 }
 .subp .pp .links a:hover { color: #fff; background: var(--accent); border-bottom-color: var(--accent); padding: 2px 4px; }
+.subp .pp.repo .repo-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.subp .pp.repo .lang {
+  font: 500 10px/1 var(--mono);
+  color: var(--fg-mute);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+.subp .pp.repo .repo-blurb {
+  font: 13px/1.6 var(--sans);
+  color: var(--fg-dim);
+  margin-top: 10px;
+  max-width: 72ch;
+}
+.subp .pp.repo .badge-new {
+  display: inline-block;
+  padding: 1px 6px;
+  margin-right: 10px;
+  font: 700 9px/1.4 var(--mono);
+  letter-spacing: 0.12em;
+  color: #000;
+  background: var(--gold);
+  border-radius: 3px;
+  vertical-align: 2px;
+}
 .subp .course .name a {
   color: var(--accent);
   text-decoration: none;
@@ -1051,9 +1081,15 @@ body { background: var(--bg); color: var(--fg); font-family: var(--sans); min-he
 /* iPad portrait & smaller laptops: collapse two-column to single, tighten gutters */
 @media (max-width: 1100px) {
   .va .content {
+    gap: 44px;
+    padding: 48px 56px;
+  }
+  .va .hero {
     grid-template-columns: 1fr;
     gap: 48px;
-    padding: 48px 56px;
+  }
+  .va .cards {
+    grid-template-columns: 1fr;
   }
   .va .photo {
     max-width: 380px;

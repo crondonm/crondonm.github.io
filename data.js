@@ -42,6 +42,19 @@ const PAPERS = [
     short: "overborrowing.imperfect-info",
   },
   {
+    yr: "2026",
+    tag: "WP №1082",
+    venue: "Central Bank of Chile WP",
+    title: "Sovereign Wealth Funds and Optimal Foreign Reserves",
+    authors: "with Acosta-Henao, Martínez",
+    coauthors: [
+      { name: "Miguel Acosta-Henao", url: "http://www.miguelacostah.com/" },
+      { name: "Humberto Martínez", url: "https://www.humbertomartinezb.com/" },
+    ],
+    pdf: "https://www.bcentral.cl/en/web/banco-central/content/-/detalle/publicaciones/investigacion-economica/documento-de-trabajo-1082",
+    short: "sovereign_wealth_funds",
+  },
+  {
     yr: "2022",
     tag: "WP №941",
     venue: "Central Bank of Chile WP",
@@ -79,17 +92,36 @@ const PAPERS = [
     ],
     short: "inflation.targeting.em",
   },
+];
+
+const REPOS = [
   {
-    yr: "WIP",
-    tag: "DRAFT",
-    venue: "in progress",
-    title: "Sovereign Wealth Funds and Foreign Reserves Accumulation",
-    authors: "with M. Acosta-Henao, H. Martinez",
-    coauthors: [
-      { name: "Miguel Acosta-Henao", url: "http://www.miguelacostah.com/" },
-      { name: "Humberto Martinez", url: "https://www.humbertomartinezb.com/" },
-    ],
-    short: "swf.reserves",
+    name: "mac-ethernet-link-monitor",
+    new: true,
+    yr: "2026",
+    tag: "UTILITY",
+    lang: "Bash · macOS",
+    blurb: "A tiny, dependency-free macOS utility that watches a network interface and fires an actionable alert the moment the link drops — so you replug a flaky USB Ethernet adapter instead of finding the dead connection ten minutes later. Snooze/mute auto-clear when the link returns. Built entirely from tools that ship with macOS (bash, osascript, ifconfig, launchctl, afplay) — nothing to install.",
+    github: "https://github.com/crondonm/mac-ethernet-link-monitor",
+    short: "mac.ethernet.monitor",
+  },
+  {
+    name: "Overborrowing_Replication_HR2025",
+    yr: "2025",
+    tag: "REPLICATION",
+    lang: "MATLAB",
+    blurb: "Full replication package for \"Overborrowing and Systemic Externalities in the Business Cycle Under Imperfect Information\" (Herreño & Rondón-Moreno, JIE 2025). A staged MATLAB pipeline discretizes the income VAR and solves both the decentralized equilibrium and the planner's problem under imperfect and perfect information — via policy- and value-function iteration — then computes welfare costs and regenerates every figure and table. Simulated data are downloadable to bypass the RAM-heavy model solve.",
+    github: "https://github.com/crondonm/Overborrowing_Replication_HR2025",
+    short: "overborrowing.replication",
+  },
+  {
+    name: "TrackingR",
+    yr: "2021",
+    tag: "REPLICATION",
+    lang: "Python",
+    blurb: "Real-time estimation of the effective reproduction number R of COVID-19 with a Kalman filter, from \"Tracking R of COVID-19\" (Arroyo-Marioli, Bullano, Kucinskas & Rondón-Moreno, PLoS ONE 2021). Ships the replication code plus a daily-updated, downloadable database of R estimates for every country under several serial-interval assumptions, built on the Johns Hopkins CSSE case data.",
+    github: "https://github.com/crondonm/TrackingR",
+    short: "tracking.R",
   },
 ];
 
@@ -170,6 +202,7 @@ const CMD_ITEMS = [
   { ic: "→", label: "Go to Research",  desc: "g r",   action: "page:research" },
   { ic: "→", label: "Go to Teaching",  desc: "g t",   action: "page:teaching" },
   { ic: "→", label: "Go to Service",   desc: "g s",   action: "page:service"  },
+  { ic: "→", label: "Go to Code",      desc: "g c",   action: "page:code"     },
   { ic: "↩", label: "Go to Home",      desc: "g h",   action: "page:home"     },
   { ic: "↗", label: "Open CV (PDF)",   desc: "extern",  action: "ext:cv"      },
   { ic: "↗", label: "GitHub · @crondonm", desc: "extern", action: "ext:gh"   },
@@ -180,4 +213,4 @@ const CMD_ITEMS = [
   { ic: "✕", label: "Close palette",   desc: "esc",   action: "close" },
 ];
 
-window.SITE_DATA = { PALETTE_4, XKCD_SWATCHES, FONT_PAIRS, PAPERS, COURSES, SERVICE, CMD_ITEMS };
+window.SITE_DATA = { PALETTE_4, XKCD_SWATCHES, FONT_PAIRS, PAPERS, REPOS, COURSES, SERVICE, CMD_ITEMS };
